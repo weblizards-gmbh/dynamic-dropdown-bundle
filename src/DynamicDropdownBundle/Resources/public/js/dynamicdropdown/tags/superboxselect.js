@@ -8,15 +8,28 @@
  * @copyright  Copyright (c) 2013 Weblizards GbR (http://www.weblizards.de)
  * @author     Thomas Keil <thomas@weblizards.de>
  * @license    http://www.pimcore.org/license     New BSD License
+ *
+ * @see vendor/pimcore/pimcore/bundles/AdminBundle/Resources/public/js/pimcore/object/tags/manyToManyRelation.js
  */
 
 pimcore.registerNS("pimcore.object.tags.superboxselect");
-pimcore.object.tags.superboxselect = Class.create(pimcore.object.tags.multihref, {
+pimcore.object.tags.superboxselect = Class.create(pimcore.object.tags.manyToManyObjectRelation, {
 
     type: "superboxselect",
 
 
     getLayoutEdit: function () {
+        // The relation field supplies Pimcore relation objects, but the tag field
+        // resolves selected records through its `valueField`.
+        var relations = Array.isArray(this.data) ? this.data : (this.data ? [this.data] : []);
+        this.initialValues = relations.map(function (relation) {
+            if (typeof relation === "object") {
+                return relation.dest_id !== undefined ? relation.dest_id : relation.id;
+            }
+
+            return relation;
+        });
+
         this.options_store = new Ext.data.JsonStore({
             proxy: {
                 type: 'ajax',
@@ -44,8 +57,7 @@ pimcore.object.tags.superboxselect = Class.create(pimcore.object.tags.multihref,
                         pimcore.helpers.showNotification(t("error"), t("error_loading_options"), "error", operation.getError());
                     }
 
-                    // FIXME is this necessary?
-                    this.component.setValue(this.data, null, true);
+                    this.component.setValue(this.initialValues);
                 }.bind(this)
             },
             autoLoad: true

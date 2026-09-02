@@ -30,8 +30,8 @@ class WeblizardsDynamicDropdownBundle extends AbstractPimcoreBundle implements P
             '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/tags/dynamicDropdownMultiple.js',
 //            '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/data/itemselector.js',
 //            '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/tags/itemselector.js',
-//            '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/data/superboxselect.js',
-//            '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/tags/superboxselect.js',
+            '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/data/superboxselect.js',
+            '/bundles/weblizardsdynamicdropdown/js/dynamicdropdown/tags/superboxselect.js',
             '/bundles/weblizardsdynamicdropdown/js/pimcore/startup.js'
         ];
     }

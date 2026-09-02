@@ -12,3 +12,35 @@
 .pimcore_icon_superboxselect {
   background: url(/bundles/weblizardsdynamicdropdown/img/dynamicdropdowntag-logo.svg) left center no-repeat !important;
 }
+
+.x-form-itemselector-btn {
+  background-color: #5897ce;
+}
+
+.x-form-itemselector-btn:hover {
+  background-color: #aac4cf;
+}
+
+.x-form-itemselector-top {
+  background-image: url(/bundles/pimcoreadmin/extjs/ext-ux/src/classic/resources/images/itemselector/top.gif);
+}
+
+.x-form-itemselector-up {
+  background-image: url(/bundles/pimcoreadmin/extjs/ext-ux/src/classic/resources/images/itemselector/up.gif);
+}
+
+.x-form-itemselector-add {
+  background-image: url(/bundles/pimcoreadmin/extjs/ext-ux/src/classic/resources/images/itemselector/right.gif);
+}
+
+.x-form-itemselector-remove {
+  background-image: url(/bundles/pimcoreadmin/extjs/ext-ux/src/classic/resources/images/itemselector/left.gif);
+}
+
+.x-form-itemselector-down {
+  background-image: url(/bundles/pimcoreadmin/extjs/ext-ux/src/classic/resources/images/itemselector/down.gif);
+}
+
+.x-form-itemselector-bottom {
+  background-image: url(/bundles/pimcoreadmin/extjs/ext-ux/src/classic/resources/images/itemselector/bottom.gif);
+}

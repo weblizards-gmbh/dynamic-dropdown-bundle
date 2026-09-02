@@ -16,7 +16,7 @@
 
 // Although this is already set in pimcore's startup.js it won't
 // work here without setting it again. Why?
-Ext.Loader.setPath('Ext.ux', '/bundles/pimcoreadmin/js/lib/ext/ux');
+Ext.Loader.setPath('Ext.ux', '/bundles/pimcoreadmin/extjs/ext-ux/src/classic/src/');
 Ext.require([
     "Ext.ux.form.ItemSelector"
 ]);
@@ -27,8 +27,19 @@ pimcore.object.tags.itemselector = Class.create(pimcore.object.tags.multiselect,
     type: "itemselector",
 
     getLayoutEdit: function() {
+        // The relation field supplies Pimcore relation objects, but the selector
+        // resolves selected records through its `valueField`.
         if (typeof this.data == "string") {
-            var values = this.data.split(",");
+            this.initialValues = this.data ? this.data.split(",") : [];
+        } else {
+            var relations = Array.isArray(this.data) ? this.data : (this.data ? [this.data] : []);
+            this.initialValues = relations.map(function (relation) {
+                if (typeof relation === "object") {
+                    return relation.dest_id !== undefined ? relation.dest_id : relation.id;
+                }
+
+                return relation;
+            });
         }
         var sort_by = this.fieldConfig.sort_by == "byvalue" ? "value" : "id";
 
@@ -57,6 +68,8 @@ pimcore.object.tags.itemselector = Class.create(pimcore.object.tags.multiselect,
                     if (!success) {
                         pimcore.helpers.showNotification(t("error"), t("error_loading_options"), "error", operation.getError());
                     }
+
+                    this.component.setValue(this.initialValues);
                 }.bind(this)
             },
             autoLoad: true
@@ -71,7 +84,7 @@ pimcore.object.tags.itemselector = Class.create(pimcore.object.tags.multiselect,
             fromTitle: t('itemselector_available'),
             toTitle: t('itemselector_selected'),
             width: 600,
-            value: this.data
+            value: this.initialValues
         };
 
         if (this.fieldConfig.width) {

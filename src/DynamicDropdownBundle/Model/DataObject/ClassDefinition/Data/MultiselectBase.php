@@ -12,7 +12,7 @@
  * vervielfältigt werden.
  *
  */
-namespace App\Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data;
+namespace Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data;
 
 class MultiselectBase extends \Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation
 {

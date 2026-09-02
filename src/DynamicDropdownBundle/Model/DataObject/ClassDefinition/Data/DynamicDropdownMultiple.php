@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data;
+namespace Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data;
 
 use Pimcore\Model\DataObject;
 

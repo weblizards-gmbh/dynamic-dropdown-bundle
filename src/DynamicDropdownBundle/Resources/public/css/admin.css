@@ -1,0 +1,14 @@
+.pimcore_icon_dynamicDropdown{
+  background: url(/bundles/weblizardsdynamicdropdown/img/dynamicdropdown-logo.svg) left center no-repeat !important;
+}
+.pimcore_icon_itemselector {
+  background: url(/bundles/weblizardsdynamicdropdown/img/dynamicdropdownitemselector-logo.svg) left center no-repeat !important;
+}
+
+.pimcore_icon_dynamicDropdownMultiple {
+  background: url(/bundles/weblizardsdynamicdropdown/img/dynamicdropdownmultiple-logo.svg) left center no-repeat !important;
+}
+
+.pimcore_icon_superboxselect {
+  background: url(/bundles/weblizardsdynamicdropdown/img/dynamicdropdowntag-logo.svg) left center no-repeat !important;
+}

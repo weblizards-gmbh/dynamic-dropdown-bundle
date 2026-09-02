@@ -1,0 +1,39 @@
+{
+  "name": "weblizards/dynamic-dropdown-bundle",
+  "type": "pimcore-bundle",
+  "keywords": [
+    "pimcore",
+    "pimcore-bundle",
+    "object-relations"
+  ],
+  "authors": [
+    {
+      "name": "Thomas Keil",
+      "email": "thomas@weblizards.de",
+      "homepage": "https://www.weblizards.de",
+      "role": "Developer"
+    },
+    {
+      "name": "Siegmar Dieser",
+      "email": "siegmar@weblizards.de",
+      "homepage": "https://www.weblizards.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "pimcore/pimcore": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Weblizards\\DynamicDropdownBundle\\": "src/DynamicDropdownBundle"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "Weblizards\\DynamicDropdownBundle\\WeblizardsDynamicDropdownBundle"
+      ]
+    }
+  }
+}

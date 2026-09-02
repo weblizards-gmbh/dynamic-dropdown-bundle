@@ -1,0 +1,9 @@
+pimcore:
+    objects:
+        class_definitions:
+            data:
+                map:
+                    dynamicDropdown: Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data\DynamicDropdown
+                    dynamicDropdownMultiple: Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data\DynamicDropdownMultiple
+                    itemselector: Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data\Itemselector
+                    superboxselect: Weblizards\DynamicDropdownBundle\Model\DataObject\ClassDefinition\Data\Superboxselect

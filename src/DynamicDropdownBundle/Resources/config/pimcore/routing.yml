@@ -1,0 +1,5 @@
+weblizards_dynamic_dropdown:
+    resource: "@WeblizardsDynamicDropdownBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/dynamicdropdownbundle
+

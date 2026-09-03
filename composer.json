@@ -1,11 +1,18 @@
 {
   "name": "weblizards/dynamic-dropdown-bundle",
   "type": "pimcore-bundle",
+  "description": "Pimcore bundle that allows to dynamically populate pimcore input fields with the content of other objects.",
   "keywords": [
     "pimcore",
     "pimcore-bundle",
     "object-relations"
   ],
+  "homepage": "https://github.com/weblizards-gmbh/dynamic-dropdown-bundle",
+  "license": "GPL-3.0-or-later",
+  "support": {
+    "issues": "https://github.com/weblizards-gmbh/dynamic-dropdown-bundle/issues",
+    "source": "https://github.com/weblizards-gmbh/dynamic-dropdown-bundle"
+  },
   "authors": [
     {
       "name": "Thomas Keil",

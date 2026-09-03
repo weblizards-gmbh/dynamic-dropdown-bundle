@@ -1,6 +1,7 @@
 {
   "name": "weblizards/dynamic-dropdown-bundle",
   "type": "pimcore-bundle",
+  "description": "Pimcore bundle that allows to dynamically populate pimcore input fields with the content of other objects.",
   "keywords": [
     "pimcore",
     "pimcore-bundle",

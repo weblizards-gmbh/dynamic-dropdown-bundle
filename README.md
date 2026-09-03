@@ -1,6 +1,6 @@
 # Dynamic Dropdown Bundle for Pimcore
 
-Dynamic Dropdown allows you to dynamically populate [pimcore](https://www.pimcore.com) input fields with the content of other objcts.
+Dynamic Dropdown allows you to dynamically populate [pimcore](https://www.pimcore.com) input fields with the content of other objects.
 Internaly it works like a `manyToManyRelation` but provides advanced UI elements, the content thus is truly dynamic.
 
 This bundle is currently intended for Pimcore 10.
